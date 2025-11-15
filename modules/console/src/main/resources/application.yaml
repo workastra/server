@@ -1,7 +1,8 @@
+---
 spring:
   application:
     name: Workastra Console
   main:
-    banner-mode: off
+    banner-mode: "off"
   jmx:
     enabled: false
