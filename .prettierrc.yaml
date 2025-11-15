@@ -1,0 +1,26 @@
+---
+plugins:
+  - prettier-plugin-java
+  - prettier-plugin-toml
+
+printWidth: 120
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: false
+quoteProps: as-needed
+jsxSingleQuote: false
+trailingComma: all
+bracketSpacing: true
+objectWrap: collapse
+bracketSameLine: false
+arrowParens: always
+endOfLine: lf
+
+overrides:
+  - files: ["*.java"]
+    options:
+      tabWidth: 4
+  - files: ["*.properties"]
+    options:
+      keySeparator: =

@@ -1,7 +1,8 @@
+---
 spring:
   application:
     name: Workastra Worker
   main:
-    banner-mode: off
+    banner-mode: "off"
   jmx:
     enabled: false
