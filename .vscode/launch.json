@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Workastra: Console",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.workastra.console.WorkastraConsoleApplication",
+      "projectName": "console",
+      "env": {}
+    }
+  ]
+}
