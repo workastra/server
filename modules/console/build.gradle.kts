@@ -17,3 +17,23 @@ dependencies {
 tasks.withType<Test> {
   useJUnitPlatform()
 }
+
+graalvmNative {
+  binaries {
+    named("main") {
+      buildArgs.addAll(
+        "-Ob",
+        "--no-fallback",
+        "--static-nolibc"
+      )
+    }
+
+    named("test") {
+      buildArgs.addAll(
+        "-Ob",
+        "--no-fallback",
+        "--static-nolibc"
+      )
+    }
+  }
+}
