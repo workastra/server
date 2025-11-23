@@ -1,4 +1,10 @@
 ---
+logging:
+  structured:
+    format:
+      console: logstash
+      file: logstash
+
 spring:
   application:
     name: Workastra Console

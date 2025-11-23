@@ -1,5 +1,5 @@
 [versions]
-spring-boot = "4.0.0-RC2"
+spring-boot = "4.0.0"
 
 [libraries]
 spring-boot-bom = { module = "org.springframework.boot:spring-boot-dependencies", version.ref = "spring-boot" }
@@ -7,4 +7,4 @@ spring-boot-bom = { module = "org.springframework.boot:spring-boot-dependencies"
 [plugins]
 spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
 spring-dependency-management = { id = "io.spring.dependency-management", version = "1.1.7" }
-graalvm-native = { id = "org.graalvm.buildtools.native", version = "0.11.2" }
+graalvm-native = { id = "org.graalvm.buildtools.native", version = "0.11.3" }

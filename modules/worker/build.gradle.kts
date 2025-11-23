@@ -1,8 +1,8 @@
 plugins {
   java
-  alias(libs.plugins.spring.boot) 
+  alias(libs.plugins.spring.boot)
   alias(libs.plugins.spring.dependency.management)
-  alias(libs.plugins.graalvm.native) 
+  alias(libs.plugins.graalvm.native)
 }
 
 dependencies {
@@ -14,4 +14,24 @@ dependencies {
 
 tasks.withType<Test> {
   useJUnitPlatform()
+}
+
+graalvmNative {
+  binaries {
+    named("main") {
+      buildArgs.addAll(
+        "-Ob",
+        "--no-fallback",
+        "--static-nolibc"
+      )
+    }
+
+    named("test") {
+      buildArgs.addAll(
+        "-Ob",
+        "--no-fallback",
+        "--static-nolibc"
+      )
+    }
+  }
 }
