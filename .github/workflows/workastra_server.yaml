@@ -22,7 +22,7 @@ on:
       - settings.gradle*
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.event.number }}
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref_name }}
   cancel-in-progress: true
 
 env:
