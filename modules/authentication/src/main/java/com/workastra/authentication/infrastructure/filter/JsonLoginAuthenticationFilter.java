@@ -11,6 +11,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import tools.jackson.core.JacksonException;
 import tools.jackson.databind.ObjectMapper;
 
 /**
@@ -54,7 +55,7 @@ public class JsonLoginAuthenticationFilter extends UsernamePasswordAuthenticatio
             );
             setDetails(request, authentication);
             return getAuthenticationManager().authenticate(authentication);
-        } catch (IOException e) {
+        } catch (JacksonException | IOException e) {
             throw new BadCredentialsException("Invalid login request", e);
         }
     }
