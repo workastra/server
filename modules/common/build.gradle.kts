@@ -5,5 +5,5 @@ plugins {
 
 dependencies {
   implementation(platform(libs.spring.boot.bom))
-  implementation("org.springframework.boot:spring-boot-starter")
+  api("org.springframework.boot:spring-boot-starter-webmvc")
 }

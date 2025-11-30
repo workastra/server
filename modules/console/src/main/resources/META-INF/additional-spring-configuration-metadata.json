@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "workastra.jwt.issuer",
+      "type": "java.lang.String",
+      "description": "The issuer claim value for JWT tokens"
+    },
+    {
+      "name": "workastra.jwt.secret",
+      "type": "java.lang.String",
+      "description": "The secret key used to sign and verify JWT tokens"
+    },
+    {
+      "name": "workastra.jwt.ttl",
+      "type": "java.lang.Integer",
+      "description": "The JWT token expiration time (in seconds or duration format)"
+    }
+  ]
+}

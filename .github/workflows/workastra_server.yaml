@@ -46,9 +46,16 @@ jobs:
           cache: gradle
 
       - name: Run checks
-        run: ./gradlew --no-daemon clean check
+        run: ./gradlew --no-daemon clean check -x test
+
+      - name: Run JVM tests
+        env:
+          SPRING_PROFILES_ACTIVE: test
+        run: ./gradlew --no-daemon clean test
 
       - name: Run native tests
+        env:
+          SPRING_PROFILES_ACTIVE: test
         run: ./gradlew --no-daemon clean nativeTest
 
   build:

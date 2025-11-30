@@ -1,7 +1,8 @@
 rootProject.name = "workastra-server"
 
 include(
-    "modules:common",
-    "modules:console",
-    "modules:worker",
+  "modules:common",
+  "modules:authentication",
+  "modules:console",
+  "modules:worker",
 )
