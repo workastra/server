@@ -1,10 +1,4 @@
 ---
-logging:
-  structured:
-    format:
-      console: logstash
-      file: logstash
-
 spring:
   application:
     name: Workastra Console
@@ -12,3 +6,11 @@ spring:
     banner-mode: "off"
   jmx:
     enabled: false
+  mvc:
+    apiversion:
+      use:
+        path-segment: 1
+  web:
+    error:
+      whitelabel:
+        enabled: false

@@ -139,5 +139,11 @@
       <property name="checks" value="HideUtilityClassConstructor" />
       <property name="query" value="//CLASS_DEF[.//ANNOTATION/IDENT[@text='SpringBootApplication']]" />
     </module>
+
+    <!-- @Bean methods must not have any modifier (only package-private allowed). -->
+    <module name="MatchXpath">
+      <property name="query" value="//METHOD_DEF[./MODIFIERS/ANNOTATION/IDENT[@text='Bean'] and count(./MODIFIERS/*) &gt; 1]"/>
+      <message key="matchxpath.match" value="@Bean methods must not declare any modifier (use package-private only)."/>
+    </module>
   </module>
 </module>
